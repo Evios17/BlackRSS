@@ -1,34 +1,49 @@
-.button__switcher--type-1{
-    padding: 3px;
-
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    background-color: transparent;
-
-    border: 1px solid #eee;
-    border-radius: 1.8rem;
-}
-
-.button__switcher--type-1 > button{
+.button__1x1{
     aspect-ratio: 1/1;
-    height: 1.8rem;
+
+    padding: 15px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-color: transparent;
+    background-color: #000;
 
     border: none;
+    border-radius: 50%;
 
-    font-size: 0.9em;
-    color: #8d8d8d;
+    color: #fff;
 
     cursor: pointer;
 }
 
-.button__switcher--type-1 > button.active{
+.button__switcher--type-1{
+    padding: 10px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: transparent;
+
+    border: 1px solid #eee;
+    border-radius: 1.8rem;
+
+    cursor: pointer;
+}
+
+.button__switcher--type-1 > i:first-child{
+    color: #000;
+}
+
+.button__switcher--type-1 > i:last-child{
+    color: #6c757d;
+}
+
+.button__switcher--type-1.toggle > i:first-child{
+    color: #6c757d;
+}
+
+.button__switcher--type-1.toggle > i:last-child{
     color: #000;
 }

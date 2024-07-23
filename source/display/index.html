@@ -12,14 +12,18 @@
 </head>
 <body>
     <main class="application">
-        <div class="dom-desktop">
+        <div class="display">
             <nav class="navigation">
-                <button class="onglet__button active" data-ogtl="0">Button 0</button>
-                <button class="onglet__button" data-ogtl="1">Button 1</button>
-                <button class="onglet__button" data-ogtl="2">Button 2</button>
+                <div>
+                    <button class="onglet__button active" data-ogtl="0"><i class="fa-solid fa-house-chimney"></i><span>Home</span></button>
+                    <button class="onglet__button" data-ogtl="1"><i class="fa-solid fa-link"></i><span>Subcribetion</span></button>
+                </div>
+                <div>
+                    <button class="onglet__button" data-ogtl="2"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+                </div>
             </nav>
             <div class="onglet__display">
-                <div class="onglet__display-case case-0 active" data-ogtl="0">
+                <div class="onglet__case case-0 active" data-ogtl="0">
                     <header class="header">
                         <div class="input-container">
                             <input type="text" class="rss-url" placeholder="Enter RSS feed URL" />
@@ -27,41 +31,50 @@
                         </div>
                     </header>
                     <header class="case-0__header">
+                        <span>We have 120 lines</span>
                         <nav class="case-0__header-navigation">
-                            <div  class="button__switcher--type-1">
-                                <button class="active"><i class="fa-solid fa-list-ol"></i></button>
-                                <button><i class="fa-solid fa-grip-vertical"></i></i></button>
-                            </div>
+                            <button class="case-0__header-navigation-button button__switcher--type-1">
+                                <i class="fa-solid fa-list-ol"></i>
+                                <i class="fa-solid fa-grip-vertical"></i></i>
+                            </button>
                         </nav>
                     </header>
-                    <section class="case-0__section section-list feed-list">
+                    <div class="case-0__section feed-list">
                         <!--<article class="section-list__article">
-                            <div class="section-list__article-infos">
-                                <div class="section-list__article-logo">
-                                    <img src="/source/display/media/logo.svg" alt="" srcset="">
-                                    <p>Channel</p>
+                            <img src="/source/display/media/image.jpg" alt="" srcset="" class="section-list__article-overlay">
+                            <div class="section-list__article-content">
+                                <div class="section-list__article-infos">
+                                    <div class="section-list__article-logo">
+                                        <img src="/source/display/media/logo.svg" alt="" srcset="">
+                                        <p>Channel</p>
+                                    </div>
+                                    <h2>Titre de l'article</h2>
+                                    <p>Description de l'article..</p>
                                 </div>
-                                <h2>Titre de l'article</h2>
-                                <p>Description de l'article..</p>
-                            </div>
-                            <div class="section-list__article-date">
-                                <i class="fa-solid fa-stopwatch"></i>
-                                <p>32 J</p>
+                                <div class="section-list__article-date">
+                                    <i class="fa-solid fa-stopwatch"></i>
+                                    <p>32 J</p>
+                                </div>
                             </div>
                         </article>-->
-                    </section>
+                    </div>
                 </div>
-                <div class="onglet__display-case" data-ogtl="1">
+                <div class="onglet__case" data-ogtl="1">
                     <h1>Page 1</h1>
                 </div>
-                <div class="onglet__display-case" data-ogtl="2">
+                <div class="onglet__case" data-ogtl="2">
                     <h1>Page 2</h1>
                 </div>
             </div>
         </div>
 
-        <div class="dom-mobile">
-
+        <div class="reader">
+            <div class="reader__display">
+                <header>
+                    test
+                    <button class="button__1x1"><i class="fa-solid fa-xmark"></i></button>
+                </header>
+            </div>
         </div>
     </main>
 

@@ -23,4 +23,18 @@ function onglet(input1, input2) {
     });
 }
 
-onglet(".onglet__button", ".onglet__display-case");
+onglet(".onglet__button", ".onglet__case");
+
+function display(input1, input2) {
+    const button = document.querySelector(input1);
+    const display = document.querySelector(input2);
+
+    button.addEventListener('click', () => {
+        console.log("Click !");
+
+        button.classList.toggle('toggle');
+        display.classList.toggle('toggle');
+    })
+}
+
+display(".case-0__header-navigation-button",".case-0__section")
