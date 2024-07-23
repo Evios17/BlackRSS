@@ -1,0 +1,178 @@
+@import "../components/button.css";
+
+.application{
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+
+  overflow: hidden;
+}
+
+.dom-desktop{
+  flex: 1;
+  display: flex;
+}
+
+/* Onglet style */
+/* Onglet style display */
+.onglet__display{
+  flex: 1;
+  display: flex;
+}
+
+.onglet__display-case{
+  flex: 1;
+
+  display: none;
+
+  border: 3px solid #0096FF;
+
+  overflow: auto;
+}
+
+.onglet__display-case.active{
+  display: flex;
+}
+
+/* Onglet style commande */
+.onglet__button.active{
+  background: red;
+}
+
+
+/* Onglet cases */
+.case-0{
+  flex-direction: column;
+}
+.case-0__header{
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  border-bottom: 1px solid #eee;
+}
+
+.section-list{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.section-list__article{
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-list__article-infos{
+  width: 100%;
+}
+
+.section-list__article-logo{
+  margin: 0 0 5px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1rem;
+  color: #000;
+}
+
+.section-list__article-logo > img{
+  aspect-ratio: 1/1;
+  height: 2rem;
+
+  padding: 5px;
+
+  background-color: #fff;
+
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
+
+.section-list__article-infos > h2{
+  font-size: 1.1rem;
+}
+
+.section-list__article-infos > p{
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.section-list__article-date{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.section-list__article-date > p{
+  white-space: nowrap;
+}
+
+
+
+
+
+
+.feed-list{
+  flex: 1;
+  overflow: auto;
+}
+
+.header{
+  width: 100%;
+
+  padding: 15px 20px;
+
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.input-container{
+  display: flex;
+  gap: 15px;
+}
+
+.rss-url{
+  width: 100%;
+  padding: 5px 20px;
+
+  background-color: #eee;
+
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
+
+.load-feed{
+  aspect-ratio: 1/1;
+
+  padding: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000;
+
+  border: none;
+  border-radius: 50%;
+
+  color: #fff;
+}
