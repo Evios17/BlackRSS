@@ -4,47 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>QuickRSS</title>
+    <title>BlackRSS</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <main class="application">
-        <header class="header">
-            <div class="input-container">
-                <input type="text" class="rss-url" placeholder="Enter RSS feed URL" />
-                <button class="load-feed"><i class="fa-solid fa-arrows-rotate"></i></button>
-            </div>
-        </header>
-        
-        <div class="content">
-            <section class="feed-list">
-                <article class="feed">
-                    <div>
-                        <img src="media/logo.svg">
-                    </div>
-                    <div class="feed-content">
-                        <div>
-                            <div class="chanel-logo">
-                                <img src="media/logo.svg">
-                                <span>Chaine</span>
+        <div class="dom-desktop">
+            <nav class="navigation">
+                <button class="onglet__button active" data-ogtl="0">Button 0</button>
+                <button class="onglet__button" data-ogtl="1">Button 1</button>
+                <button class="onglet__button" data-ogtl="2">Button 2</button>
+            </nav>
+            <div class="onglet__display">
+                <div class="onglet__display-case case-0 active" data-ogtl="0">
+                    <header class="header">
+                        <div class="input-container">
+                            <input type="text" class="rss-url" placeholder="Enter RSS feed URL" />
+                            <button class="load-feed"><i class="fa-solid fa-arrows-rotate"></i></button>
+                        </div>
+                    </header>
+                    <header class="case-0__header">
+                        <nav class="case-0__header-navigation">
+                            <div  class="button__switcher--type-1">
+                                <button class="active"><i class="fa-solid fa-list-ol"></i></button>
+                                <button><i class="fa-solid fa-grip-vertical"></i></i></button>
                             </div>
-                            <div>
+                        </nav>
+                    </header>
+                    <section class="case-0__section section-list feed-list">
+                        <!--<article class="section-list__article">
+                            <div class="section-list__article-infos">
+                                <div class="section-list__article-logo">
+                                    <img src="/source/display/media/logo.svg" alt="" srcset="">
+                                    <p>Channel</p>
+                                </div>
                                 <h2>Titre de l'article</h2>
-                                <p>Description simple de l'article..</p>
+                                <p>Description de l'article..</p>
                             </div>
-                        </div>
-                        <div>
-                            <span>23 Jours</span>
-                        </div>
-                    </div>
-                </article>
-            </section>
+                            <div class="section-list__article-date">
+                                <i class="fa-solid fa-stopwatch"></i>
+                                <p>32 J</p>
+                            </div>
+                        </article>-->
+                    </section>
+                </div>
+                <div class="onglet__display-case" data-ogtl="1">
+                    <h1>Page 1</h1>
+                </div>
+                <div class="onglet__display-case" data-ogtl="2">
+                    <h1>Page 2</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="dom-mobile">
+
         </div>
     </main>
 
-    <script src="renderer.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/function.js"></script>
 </body>
 </html>

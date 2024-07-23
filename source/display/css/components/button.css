@@ -1,0 +1,34 @@
+.button__switcher--type-1{
+    padding: 3px;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    background-color: transparent;
+
+    border: 1px solid #eee;
+    border-radius: 1.8rem;
+}
+
+.button__switcher--type-1 > button{
+    aspect-ratio: 1/1;
+    height: 1.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+
+    border: none;
+
+    font-size: 0.9em;
+    color: #8d8d8d;
+
+    cursor: pointer;
+}
+
+.button__switcher--type-1 > button.active{
+    color: #000;
+}
