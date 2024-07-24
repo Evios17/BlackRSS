@@ -40,7 +40,7 @@ document.querySelector('.load-feed').addEventListener('click', async () => {
       const extractFirstImage = (content) => {
         const imgRegex = /<img[^>]+src="([^">]+)"/;
         const match = content.match(imgRegex);
-        return match ? match[1] : '/source/display/media/no-image.png';
+        return match ? match[1] : 'media/no-image.png';
       };
       
       // Function to calculate the number of days ago
@@ -80,13 +80,14 @@ document.querySelector('.load-feed').addEventListener('click', async () => {
         } else if (item["content:encoded"] && item["content:encoded"][0]) {
           image = extractFirstImage(item["content:encoded"][0]);
         } else {
-          image = "/source/display/media/no-image.png"
+          image = "media/no-image.png"
         }
 
         feedList.innerHTML += `
           <article class="section-list__article">
             <img src="${image}" alt="" srcset="" class="section-list__article-overlay">
             <div class="section-list__article-content">
+              <div class="section-list__article-status"></div>
               <div class="section-list__article-infos">
                   <div class="section-list__article-logo">
                       <img src="${faviconUrl}" alt="" srcset="">
