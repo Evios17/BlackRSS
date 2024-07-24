@@ -17,6 +17,58 @@
     cursor: pointer;
 }
 
+.button__type-1{
+    padding: 10px 15px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: transparent;
+
+    border: 1px solid #eee;
+    border-radius: 1.8rem;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.button__type-1-1x1 {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background-color: transparent;
+
+    border: 1px solid #eee;
+    border-radius: 1.8rem;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.button__type-1-1x1.remove-btn:hover {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+.button__type-2{
+    aspect-ratio: 1/1;
+    padding: 12.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .button__switcher--type-1{
     padding: 10px 15px;
 

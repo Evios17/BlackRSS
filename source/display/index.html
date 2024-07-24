@@ -11,69 +11,101 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <main class="application">
-        <div class="display">
-            <nav class="navigation">
+    <main class="app">
+        <div class="content">
+            <nav class="sidebar">
                 <div>
-                    <button class="onglet__button active" data-ogtl="0"><i class="fa-solid fa-house-chimney"></i><span>Home</span></button>
-                    <button class="onglet__button" data-ogtl="1"><i class="fa-solid fa-link"></i><span>Subscriptions</span></button>
+                    <button class="tab-btn active" data-tab="0">
+                        <i class="fa-solid fa-house-chimney"></i><span>Home</span>
+                    </button>
+                    <button class="tab-btn" data-tab="1">
+                        <i class="fa-solid fa-link"></i><span>Subscriptions</span>
+                    </button>
                 </div>
                 <div>
-                    <button class="onglet__button" data-ogtl="2"><i class="fa-solid fa-gear"></i><span>Settings</span></button>
+                    <button class="tab-btn" data-tab="2">
+                        <i class="fa-solid fa-terminal"></i><span>Logs</span>
+                    </button>
+                    <button class="tab-btn" data-tab="3">
+                        <i class="fa-solid fa-gear"></i><span>Settings</span>
+                    </button>
                 </div>
             </nav>
-            <div class="onglet__display">
-                <div class="onglet__case case-0 active" data-ogtl="0">
-                    <header class="header">
-                        <div class="input-container">
-                            <input type="text" class="rss-url" placeholder="Enter RSS feed URL" />
-                            <button class="load-feed"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <div class="tab-content">
+                <section class="tab-pane tab-pane-1 active" data-tab="0">
+                    <!--<header class="main-header">
+                        <div class="input-wrapper">
+                            <input type="text" class="rss-input input-type-1" placeholder="Enter RSS feed URL" />
+                            <button class="refresh-btn button__type-2"><i class="fa-solid fa-arrows-rotate"></i></button>
+                        </div>
+                    </header>-->
+                    <div class="section-content">
+                        <header class="section-header">
+                            <nav class="search-bar">
+                                <input type="text" class="rss-input input-type-1" placeholder="Enter your search.." />
+                                <button class="button__type-2"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </nav>
+                            <nav class="view-switcher">
+                                <button class="button__type-1"><i class="fa-solid fa-filter"></i><span>Filter</span></button>
+                                <button class="switch-btn button__switcher--type-1">
+                                    <i class="fa-solid fa-list-ol"></i>
+                                    <i class="fa-solid fa-grip-vertical"></i>
+                                </button>
+                                <button class="refresh-btn button__type-2"><i class="fa-solid fa-arrows-rotate"></i></button>
+                            </nav>
+                        </header>
+                        <div class="feed-list">
+                            <article class="feed-item">
+                                <div class="feed-item-content">
+                                    <div class="feed-item-details">
+                                        <div class="feed-item-top">
+                                            <div class="feed-item-logo">
+                                                <img src="media/logo.svg" alt="Channel Logo">
+                                                <p class="feed-item-channel">Channel</p>
+                                            </div>
+                                            <p class="feed-item-date">25 June, 2024 • 23 min</p>
+                                        </div>
+                                        <h2>Réalisation d'un client design de flux RSS, programmé en java script.</h2>
+                                        <p>With Proton Scribe, your team will save time writing emails, and you'll protect your business data by reducing the need to expose it to AI assistants.</p>
+                                    </div>
+                                </div>
+                                <div class="feed-item-img">
+                                    <img src="media/image.jpg" alt="Feed Thumbnail" class="feed-item-img-content">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <footer class="section-footer">
+                        <p class="section-footer-counter"></p>
+                    </footer>
+                </section>
+                <section class="tab-pane" data-tab="1">
+                    <header class="main-header">
+                        <div class="input-wrapper">
+                            <input type="text" class="rss-input-sub input-type-1" placeholder="Enter RSS feed URL" />
+                            <button class="add-btn button__type-2">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
                         </div>
                     </header>
-                    <header class="case-0__header">
-                        <span>We have 120 lines</span>
-                        <nav class="case-0__header-navigation">
-                            <button class="case-0__header-navigation-button button__switcher--type-1">
-                                <i class="fa-solid fa-list-ol"></i>
-                                <i class="fa-solid fa-grip-vertical"></i></i>
-                            </button>
-                        </nav>
-                    </header>
-                    <div class="case-0__section feed-list">
-                        <article class="section-list__article">
-                            <img src="/source/display/media/image.jpg" alt="" srcset="" class="section-list__article-overlay">
-                            <div class="section-list__article-content">
-                                <div class="section-list__article-status"></div>
-                                <div class="section-list__article-infos">
-                                    <div class="section-list__article-logo">
-                                        <img src="/source/display/media/logo.svg" alt="" srcset="">
-                                        <p>Channel</p>
-                                    </div>
-                                    <h2>Réalisation d'un client design de flux RSS, programmé en java script.</h2>
-                                    <p>Description de l'article..</p>
-                                </div>
-                                <div class="section-list__article-date">
-                                    <i class="fa-solid fa-stopwatch"></i>
-                                    <p>32 J</p>
-                                </div>
-                            </div>
-                        </article>
+                    <div class="subscription-list"></div>
+                </section>
+                <section class="tab-pane" data-tab="2">
+                    <div class="console-log-content">
+                        <pre class="console-log"></pre>
                     </div>
-                </div>
-                <div class="onglet__case" data-ogtl="1">
-                    <h1>Page 1</h1>
-                </div>
-                <div class="onglet__case" data-ogtl="2">
-                    <h1>Page 2</h1>
-                </div>
+                </section>
+                <section class="tab-pane" data-tab="3">
+                    <h1>Page 3</h1>
+                </section>
             </div>
         </div>
 
         <div class="reader">
-            <div class="reader__display">
+            <div class="reader-content">
                 <header>
                     test
-                    <button class="button__1x1"><i class="fa-solid fa-xmark"></i></button>
+                    <button class="close-btn button__type-1-1x1"><i class="fa-solid fa-xmark"></i></button>
                 </header>
             </div>
         </div>
